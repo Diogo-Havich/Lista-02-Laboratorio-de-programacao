@@ -2,16 +2,16 @@
 
 int main()
   {
-  int num, fat;
+  int F, fat;
   puts("\nDigite o valor\n");
-  scanf("%d", &num);
-  fat = num;
-  printf(" %d! = %d", num, num);
-  while(num > 1)
+  scanf("%d", &F);
+  fat = F;
+  printf(" %d! = %d", F, F);
+  while(F > 1)
     {
-    printf(" X %d", num-1);
-    num--;
-    fat = fat * num;
+    printf(" X %d", F - 1);
+    F--;
+    fat = fat * F;
     }
   printf(" = %d\n", fat);
   return 0;
