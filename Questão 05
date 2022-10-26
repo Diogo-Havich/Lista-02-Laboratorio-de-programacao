@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+  {
+  int num = 0, maior = 0, menor = 0;
+  puts("Digite os valores");
+  scanf("%d", &num);
+  maior = num;
+  menor = num;
+  while(num != 0)
+      {
+      puts("Digite os valores");
+      scanf("%d", &num);
+      maior = (maior < num && num != 0) ? num : maior;
+      menor = (menor > num && num != 0) ? num : menor;
+      }
+    printf("\nMaior = %d\nMenor = %d\n", maior, menor);
+  return 0;
+  }
