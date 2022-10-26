@@ -2,8 +2,8 @@
 
 int main()
   {
-  int num;
-  do
+  int num = 1;
+  while(num != 0)
     {
     puts("\nDigite o dia da semana\n");
     scanf("%d", &num);
@@ -38,6 +38,5 @@ int main()
       break;
       }
     }
-    while(num != 0);
   return 0;
   }
