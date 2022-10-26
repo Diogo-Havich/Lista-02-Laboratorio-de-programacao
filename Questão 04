@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+  {
+  float j = 150, p = 110;
+  int cont = 0;
+  while(p < j)
+    {
+    p = p + 3;
+    j = j + 2;
+    cont ++;
+    }
+  printf("Jose será mais alto que pedro em %d anos\n", cont);
+  return 0;
+  }
