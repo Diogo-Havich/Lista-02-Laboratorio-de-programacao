@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+  {
+  int num, fat;
+  puts("\nDigite o valor\n");
+  scanf("%d", &num);
+  fat = num;
+  printf(" %d! = %d", num, num);
+  while(num > 1)
+    {
+    printf(" X %d", num-1);
+    num--;
+    fat = fat * num;
+    }
+  printf(" = %d\n", fat);
+  return 0;
+  }
+   
