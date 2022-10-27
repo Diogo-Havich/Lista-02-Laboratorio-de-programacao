@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+  {
+  int cont = 0, valor = 10, inteiro, parc1;
+  float valor1 = 0, totalP, preco, total;
+  puts("Digite o primeiro valor");
+  scanf("%f", &valor1);
+  preco = valor1;
+  while(valor1 >= 10)
+    {
+    valor1 = valor1 / 10;
+    cont++;
+    }
+  while(cont > 1)
+    {
+    valor = valor * 10;
+    cont--;
+    }
+  inteiro = ((int)valor1 % 10) * valor;
+  totalP = preco - inteiro;
+  parc1 = (inteiro / 2) / 2;
+  total = preco - (parc1 * 2);
+  printf("entrada = %.2f parcela1 = %d parcela2 = %d", total, parc1,parc1);
+  return 0;
+  }
+  
