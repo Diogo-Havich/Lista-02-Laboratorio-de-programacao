@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+  {
+  int num = 0, opc = 0, votP = 0, votR = 0, nul = 0, bran = 0;
+  float soma = 0;        printf("________________________________________\n|\t\t\t\t|\t\t\t\t\t\t|\n|\t\t\t\t|\t1\t\t2\t\t3\t|\n|\t\t\t\t|\t\t\t\t\t\t|\n|\t\t\t\t|\t4\t\t5\t\t6\t|\n|\t\t\t\t|\t\t\t\t\t\t|\n|\t\t\t\t|\t7\t\t8\t\t9\t|\n|\t\t\t\t|\t\t\t\t\t\t|\n|\t\t\t\t|\t\t\t0\t\t\t|\n|\t\t\t\t|\t\t\t\t\t\t|\n|===============|Branco Corrige Confirma|\n=========================================\n");
+  while(num >= 0)
+    {
+    puts("\nDigite o seu voto para presidente\n");
+    scanf("%d", &num);
+    if(num < 0)
+      {
+        puts("Fim da eleção");
+        soma = bran + nul + votP + votR;
+        printf("Brancos = %d votos (%.1f%%)\nNulos = %d votos (%.1f%%)\nPaulo = %d votos (%.1f%%)\tRenata = %d votos (%.1f%%)\n", bran, (float)bran / soma * 100, nul, (float)nul / soma * 100, votP, (float)votP / soma * 100, votR, (float)votR / soma * 100);
+        if((float)votP / soma > 0.5)
+          {
+          puts("\nO vencedor foi Paulo\n");
+          }
+        else if((float)votR / soma > 0.5)
+          {
+          puts("\nA vencedora foi Renata\n");
+          }
+        else
+          {
+          puts("Nenhum vencedor, Segundo turno necessário\n");
+          }
+        exit(1);
+      }
+    switch(num)
+      {
+      case 0:
+        puts("Deseja votar em branco?\n1. Sim\t2. Não\n");
+        scanf("%d", &opc);
+        switch(opc)
+          {
+          case 1:
+            bran++;
+            puts("\nConcluido\n");
+            break;
+          default:
+            break;
+          }
+        break;
+      case 5:
+        puts("Deseja votar em Paulo?\n1. Sim\t2. Não\n");
+        scanf("%d", &opc);
+        switch(opc)
+          {
+          case 1:
+            votP++;
+            puts("\nConcluido\n");
+            break;
+          default:
+            break;
+          }
+        break;
+      case 7:
+        puts("Deseja votar em Renata?\n1. Sim\t2. Não\n");
+        scanf("%d", &opc);
+        switch(opc)
+          {
+          case 1:
+            votR++;
+            puts("\nConcluido\n");
+            break;
+            default:
+            break;
+          }
+          break;
+          default:
+            puts("Deseja votar nulo?\n1. Sim\t2. Não\n");
+            scanf("%d", &opc);
+            switch(opc)
+              {
+              case 1:
+                nul++;
+                puts("\nConcluido\n");
+                break;
+                default:
+                break;
+              }
+            break;
+      }
+    }
+  return 0;
+  }
