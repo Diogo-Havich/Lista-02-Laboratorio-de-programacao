@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() 
+  {
+  int num1 = 1, num2 = 1, total = 0,cont = 0;
+  printf("%d\n%d\n", num1, num2);
+  while(cont < 18)
+    {
+    total = num1 + num2;
+    num2 = num1;
+    num1 = total;
+    cont++;
+    printf("%d\n", total);
+    }
+  return 0;
+  }
