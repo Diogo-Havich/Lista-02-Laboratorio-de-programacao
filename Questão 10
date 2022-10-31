@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+  {
+  int A = 15, B = 90, i;
+  i = A;
+  while(i % 4 != 0)
+    {
+    i++;
+    } 
+  while(i < B)
+    {
+    printf("%d\n", i * i);
+    i = i + 4;
+    }
+  return 0;
+  }
