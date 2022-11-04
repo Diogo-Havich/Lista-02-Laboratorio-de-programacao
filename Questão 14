@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+  {
+  int A, B, aux, i, cont = 0;
+  puts("Digite o valor inicial\n");
+  scanf("%d", &A);
+  puts("Digite o valor final\n");
+  scanf("%d", &B);
+  if(A > B)
+    {
+    aux = A;
+    A = B;
+    B = aux;
+    }
+    i = A;
+    while(i < B)
+    {
+    i = i % 3 ? i + 2 : i;    
+    cont = cont + 1;
+    i++;
+    }
+  printf("\nquantidade de numeros divisiveis por 3 = %d\n", cont);
+  return 0;
+  }
