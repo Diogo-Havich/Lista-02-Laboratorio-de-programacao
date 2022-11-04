@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define BASE 3
+#define MAX 8
+int main()
+  {    
+  int exp, result = 1, i = 0;
+  srand(time(NULL));
+  exp = rand() % MAX;
+  while(i < exp)
+    {
+    result = result * BASE;
+    i++;
+     }
+  printf("base = %d, expoente = %d\n\nresultado = %d\n", BASE, exp, result);
+  return 0;
+  }
