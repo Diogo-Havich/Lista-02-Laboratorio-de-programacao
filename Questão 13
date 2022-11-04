@@ -16,7 +16,7 @@ int main()
     i = A;
     while(i < B)
     {
-    i = i % 2 ? i + 1: i;    
+    i = i % 2 ? i + 1 : i;    
     soma = soma + i;
     i++;
     }
