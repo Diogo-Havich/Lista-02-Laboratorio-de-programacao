@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+  {
+  int A, B, aux, i, soma = 0;
+  puts("Digite o valor inicial\n");
+  scanf("%d", &A);
+  puts("Digite o valor final\n");
+  scanf("%d", &B);
+  if(A > B)
+    {
+    aux = A;
+    A = B;
+    B = aux;
+    }
+    i = A;
+    while(i < B)
+    {
+    i = i % 2 ? i + 1: i;    
+    soma = soma + i;
+    i++;
+    }
+  printf("\nsomatorio = %d\n", soma);
+  return 0;
+  }
