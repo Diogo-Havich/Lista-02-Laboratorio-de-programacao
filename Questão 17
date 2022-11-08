@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+  {
+  float c = 10, f;
+  printf("  C\t\t  F\n");
+  while(c <= 100)
+    {
+    f = c * 1.8 + 32;
+    printf("%.2f\t%.2f\n", c, f);
+    c = c + 10;
+    }
+  return 0;
+  }
