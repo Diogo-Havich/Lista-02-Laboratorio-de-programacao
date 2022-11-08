@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 #define DOBRO 2
+
 int main()
   {
-  int i = 0, casas = 1;
+  int i = 0, casas = 0;
   long int soma = 1, trigo = 1;
-  while(casas < 64)
+  while(casas <= 64)
     {
     printf("%li\n", soma);
     trigo = trigo * DOBRO ;
