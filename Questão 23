@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+  {
+  int i = 0, result = 0;
+    
+  printf("\nResultado inicial = %d\n", result);
+  //Primeira operação  
+  result = i-- * 5 + 2;
+  i = 0;
+  printf("\nOperação 1: --i * 5 + 2\nPrimeiro resultado = %d\n", result);
+  //Segunda operação
+  result = --i * 5 + 2;
+  i = 0;
+  printf("\nOperação 2: i-- * 5 + 2\nSegundo resultado = %d\n", result);
+  //Terceira operção
+  result = i++ * 5 + 2;
+  i = 0;
+  printf("\nOperação 3: ++i * 5 + 2\nTerceiro resultado = %d\n", result);
+  //Última operação
+  result = ++i * 5 + 2;
+  i = 0;
+  printf("\nOperação 4: i++ * 5 + 2\nÚltimo resultado = %d\n", result);
+    
+  return 0;
+  }
