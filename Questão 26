@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() 
+  {
+  int bin, num = 1;
+  for(num = 1; num <= 256; num++) 
+    {
+    for(int i = 8; i >= 0; i--)
+      {
+      bin = num >> i;
+        if(bin & 1)
+        printf("1");
+      else
+        printf("0");
+        }
+    printf("\n%x\n", num);
+    printf("%o\n\n", num);
+    }
+  return 0;
+  }
+  
