@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() 
+  {
+  int maior, menor, num = 1, i = 0; 
+  while(num > 0 || num % 2)
+    {
+    puts("Digite o valor");
+    scanf("%d", &num);
+    maior = i > 0 ? maior : num;
+    menor = i > 0 ? menor : num;
+    i++;
+    if(num < 0 && num % 2 == 0)
+      {
+      break;
+      }
+    maior = maior < num ? num : maior;
+    menor = menor > num ? num : menor;
+    }
+    printf("\n%d\n", menor * maior);
+  return 0;
+  }
+  
